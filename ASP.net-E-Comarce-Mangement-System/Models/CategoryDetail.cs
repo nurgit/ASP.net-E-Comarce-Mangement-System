@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace ASP.net_E_Comarce_Mangement_System.Models
 {
@@ -38,6 +39,6 @@ namespace ASP.net_E_Comarce_Mangement_System.Models
         [Required]
         [Range(typeof(decimal), "1", "200000", ErrorMessage = "invalid Price")]
         public Nullable<decimal> Price { get; set; }
-        
+        public SelectList Categories { get; set; }
     }
 }
