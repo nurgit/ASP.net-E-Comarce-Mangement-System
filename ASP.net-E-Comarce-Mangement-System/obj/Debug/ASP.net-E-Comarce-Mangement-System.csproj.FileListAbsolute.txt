@@ -110,3 +110,7 @@ G:\AIUB\12th-SEMISTER\ADVANCED PROGRAMMING WITH .NET [A]\midterm\Project\ASP.net
 G:\AIUB\12th-SEMISTER\ADVANCED PROGRAMMING WITH .NET [A]\midterm\Project\ASP.net-E-Comarce-Mangement-System\ASP.net-E-Comarce-Mangement-System\obj\Debug\ASP.net-E-Comarce-Mangement-System.csproj.CopyComplete
 G:\AIUB\12th-SEMISTER\ADVANCED PROGRAMMING WITH .NET [A]\midterm\Project\ASP.net-E-Comarce-Mangement-System\ASP.net-E-Comarce-Mangement-System\obj\Debug\ASP.net-E-Comarce-Mangement-System.dll
 G:\AIUB\12th-SEMISTER\ADVANCED PROGRAMMING WITH .NET [A]\midterm\Project\ASP.net-E-Comarce-Mangement-System\ASP.net-E-Comarce-Mangement-System\obj\Debug\ASP.net-E-Comarce-Mangement-System.pdb
+G:\AIUB\12th-SEMISTER\ADVANCED PROGRAMMING WITH .NET [A]\midterm\Project\ASP.net-E-Comarce-Mangement-System\ASP.net-E-Comarce-Mangement-System\bin\EntityFramework.dll
+G:\AIUB\12th-SEMISTER\ADVANCED PROGRAMMING WITH .NET [A]\midterm\Project\ASP.net-E-Comarce-Mangement-System\ASP.net-E-Comarce-Mangement-System\bin\EntityFramework.SqlServer.dll
+G:\AIUB\12th-SEMISTER\ADVANCED PROGRAMMING WITH .NET [A]\midterm\Project\ASP.net-E-Comarce-Mangement-System\ASP.net-E-Comarce-Mangement-System\bin\EntityFramework.xml
+G:\AIUB\12th-SEMISTER\ADVANCED PROGRAMMING WITH .NET [A]\midterm\Project\ASP.net-E-Comarce-Mangement-System\ASP.net-E-Comarce-Mangement-System\bin\EntityFramework.SqlServer.xml

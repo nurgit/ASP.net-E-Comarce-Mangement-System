@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -124,6 +132,49 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryDetail.cs" />
+    <Compile Include="Models\E-Comarce.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>E-Comarce.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E-Comarce.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>E-Comarce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E-Comarce.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>E-Comarce.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_Cart.cs">
+      <DependentUpon>E-Comarce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_CartStatus.cs">
+      <DependentUpon>E-Comarce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_Category.cs">
+      <DependentUpon>E-Comarce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_MemberRole.cs">
+      <DependentUpon>E-Comarce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_Members.cs">
+      <DependentUpon>E-Comarce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_Product.cs">
+      <DependentUpon>E-Comarce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_Roles.cs">
+      <DependentUpon>E-Comarce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_ShippingDetails.cs">
+      <DependentUpon>E-Comarce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_SlideImage.cs">
+      <DependentUpon>E-Comarce.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -143,8 +194,26 @@
     <Content Include="Images\81_12_24_2017_10_26_28.jpg" />
     <Content Include="Images\85_05_20_2018_11_20_09.jpg" />
     <Content Include="Images\86_05_20_2018_11_24_43.jpg" />
+    <Content Include="Images\searchIcon.png" />
+    <Content Include="Models\E-Comarce.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>E-Comarce.Context.cs</LastGenOutput>
+      <DependentUpon>E-Comarce.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\E-Comarce.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>E-Comarce.edmx</DependentUpon>
+      <LastGenOutput>E-Comarce.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\E-Comarce.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>E-Comarce.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\E-Comarce.edmx.diagram">
+      <DependentUpon>E-Comarce.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -173,7 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -187,6 +255,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
