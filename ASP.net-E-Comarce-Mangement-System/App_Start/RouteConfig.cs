@@ -17,6 +17,7 @@ namespace ASP.net_E_Comarce_Mangement_System
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                
             );
         }
     }
