@@ -1,5 +1,5 @@
 ﻿@*@model IEnumerable<ASP.net_E_Comarce_Mangement_System.Models.Tbl_Category>*@
-@model List <ASP.net_E_Comarce_Mangement_System.Models.Tbl_Category>
+@model List<ASP.net_E_Comarce_Mangement_System.Models.Tbl_Category>
 
 @{
     ViewBag.Title = "Categories";
@@ -7,7 +7,6 @@
 }
 
 @*<h2>Categories</h2>*@
-
 @*<p>
         @Html.ActionLink("Create New", "Create")
     </p>
@@ -47,18 +46,20 @@
     </table>*@
 <div class="container-fluid">
     <!-- Breadcrumbs-->
+
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">Categories</li>
+
     </ol>
     <!-- DataTables Example -->
     <div class="card mb-3">
         <div class="card-header">
             <i class="fas fa-table"></i>
-            <a href="../Admin/AddCategory" class="btn btn-info pull-right fa fa-plus" style="float:right">Add New</a>
             Category Details
+            <a href="../Admin/AddCategory" class="btn btn-info pull-right fa fa-plus" style="float:right">Add New</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -85,7 +86,10 @@
                             <tr>
                                 <td>@(Model.IndexOf(item)+1)</td>
                                 <td>@item.CategoryName</td>
-                                <td><a href="#">Edit</a></td>
+                                <td>
+                                    @Html.ActionLink("Edit", "CategoryEdit", new { catId = item.CategoryId })
+                                </td>
+
 
                             </tr>
                         }

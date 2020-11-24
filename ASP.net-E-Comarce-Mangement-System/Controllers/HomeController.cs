@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASP.net_E_Comarce_Mangement_System.Models.Home;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,25 +7,23 @@ using System.Web.Mvc;
 
 namespace ASP.net_E_Comarce_Mangement_System.Controllers
 {
-    public class HomeController : Controller
+    namespace OnlineShoppingStore.Controllers
     {
-        public ActionResult Index()
+        public class HomeController : Controller
         {
-            return View();
-        }
+            public ActionResult Index(string search)
+            {
+                HomeIndexViewModel model = new HomeIndexViewModel();
+                return View(model.CreateModel(search));
+            }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+            public ActionResult About()
+            {
+                ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
+                return View();
+            }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }
