@@ -27,6 +27,14 @@ namespace ASP.net_E_Comarce_Mangement_System.Repositories
             _DBEntity.SaveChanges();
         }
 
+        public IEnumerable<Tbl_Entity> GetProduct()
+        {
+            //throw new NotImplementedException();
+            return _dbSet.ToList();
+
+        }
+
+
         public int GetAllrecordCount()
         {
             //throw new NotImplementedException();
@@ -128,12 +136,18 @@ namespace ASP.net_E_Comarce_Mangement_System.Repositories
             //throw new NotImplementedException();
             _dbSet.Attach(entity);
             _DBEntity.Entry(entity).State = EntityState.Modified;
+            _DBEntity.SaveChanges();
         }
 
         public void UpdateByWhereClause(Expression<Func<Tbl_Entity, bool>> wherePredict, Action<Tbl_Entity> ForEachPredict)
         {
             //throw new NotImplementedException();
             _dbSet.Where(wherePredict).ToList().ForEach(ForEachPredict);
+        }
+
+        public Tbl_Entity GetProductById(int productId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

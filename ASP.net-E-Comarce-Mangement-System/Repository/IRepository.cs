@@ -9,6 +9,8 @@ namespace ASP.net_E_Comarce_Mangement_System.Repository
 {
     public interface IRepository<Tbl_Entity> where Tbl_Entity : class
     {
+        IEnumerable<Tbl_Entity> GetProduct();
+        Tbl_Entity GetProductById (int productId);
         IEnumerable<Tbl_Entity> GetAllRecords();
         IQueryable<Tbl_Entity> GetAllRecordsIQueryable();
         int GetAllrecordCount();

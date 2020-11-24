@@ -27,7 +27,6 @@ namespace ASP.net_E_Comarce_Mangement_System.Models
         public Nullable<bool> IsDelete { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
-        public Nullable<System.DateTime> Description { get; set; }
         public string ProductImage { get; set; }
         public Nullable<bool> IsFeatured { get; set; }
         public Nullable<int> Quantity { get; set; }

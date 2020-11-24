@@ -44,10 +44,35 @@ namespace ASP.net_E_Comarce_Mangement_System.Controllers
             return View("UpdateCategory", cd);
 
         }
-
+        //---product
         public ActionResult Product()
+        {
+            return View(_unitOfWork.GetRepositoryInstance<Tbl_Product>().GetProduct());
+        }
+        //---update product 
+        public ActionResult ProductEdit(int productId)
+        {
+            return View(_unitOfWork.GetRepositoryInstance<Tbl_Product>().GetFirstorDefault(productId));
+        }
+
+        [HttpPost]
+        public ActionResult ProductEdit(Tbl_Product tbl)
+        {
+            _unitOfWork.GetRepositoryInstance<Tbl_Product>().Update(tbl);
+            return RedirectToAction("Product");
+        }
+
+        //--add prodict 
+        public ActionResult ProductAdd()
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult ProductAdd(Tbl_Product tbl)
+        {
+            _unitOfWork.GetRepositoryInstance<Tbl_Product>().Add(tbl);
+            return RedirectToAction("Product");
+        }
     }
+
 }
